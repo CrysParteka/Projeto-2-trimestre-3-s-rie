@@ -95,12 +95,19 @@ function mostraAlternativas(){
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacoes;
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historia += afirmacoes + "";
     atual++;
     mostraPergunta();
 }
+
+    function mostraResultado() {
+        caixaPerguntas.textContent = "Em 2049...";
+        textoResultado.textContent = historiaFinal;
+        caixaAlternativas.textContent = "";
+    }
+
 mostraPergunta();
 
 mostraPergunta();
